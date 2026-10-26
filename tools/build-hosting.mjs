@@ -1,0 +1,11 @@
+import { cp, mkdir } from 'node:fs/promises';
+import { execFileSync } from 'node:child_process';
+await mkdir('hosting/.openai', { recursive: true });
+await cp('.openai/hosting.json', 'hosting/.openai/hosting.json');
+await cp('public', 'hosting/public', { recursive: true });
+await mkdir('hosting/public/shared', { recursive: true });
+await cp('shared/config.mjs', 'hosting/public/shared/config.mjs');
+const npm = process.platform === 'win32' ? 'npm.cmd' : 'npm';
+execFileSync(npm, ['run', 'build'], { cwd: 'hosting', stdio: 'inherit', shell: process.platform === 'win32' });
+await cp('hosting/dist', 'dist', { recursive: true });
+await cp('hosting/drizzle', 'drizzle', { recursive: true });

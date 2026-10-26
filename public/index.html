@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5edda"><title>大肥鱼</title><link rel="icon" href="/assets/rice-grains.png"><link rel="stylesheet" href="/style.css"></head>
+<body>
+  <header><a href="/">大肥鱼</a><div><button id="settings-toggle" class="ghost">模型</button> <button id="reset" class="ghost" title="重置进度" aria-label="重置进度">重置</button></div></header>
+  <section id="settings" class="settings" aria-label="聊天模型设置">
+    <label class="field" id="key-row"><span>API Key</span>
+      <input id="model-key" type="password" autocomplete="off" placeholder="自己的 DeepSeek Key" required>
+    </label>
+    <label class="field"><span>模型名</span>
+      <input id="model-name" placeholder="deepseek-flash" autocomplete="off">
+    </label>
+    <div class="settings-actions">
+      <button id="model-save">保存并验证</button>
+      <span id="model-status" role="status"></span>
+    </div>
+  </section>
+  <main>
+    <section class="character-panel">
+      <div id="drop-zone" class="character-stage" role="button" tabindex="0" aria-label="投喂区，饭量耗尽时可取下铁盆">
+        <div id="bubble" class="bubble" aria-live="polite">爸，饿，喂。</div>
+        <div class="fish-anchor"><div id="fish-pulse"><div id="fish-body"><img id="character" src="/assets/character-hungry.png" alt="大肥鱼" draggable="false"><img id="head-basin" src="/assets/basin-hat-tight.png" alt="头上的铁盆，可拖下来" draggable="false" hidden></div></div></div>
+      </div>
+      <div class="energy">
+        <div class="energy-line"><span>饭量</span><span><b id="energy">0</b><small> / <span id="capacity">600</span></small></span></div>
+        <div class="meter" role="progressbar" aria-label="饭量" aria-valuemin="0" aria-valuemax="600" aria-valuenow="0"><i id="energy-bar"></i></div>
+        <button id="retrieve" hidden>取盆</button>
+      </div>
+    </section>
+    <section class="chat-panel">
+      <div class="section-head"><h1>聊天</h1></div>
+      <div id="chat-log" role="log" aria-live="polite" aria-relevant="additions text"></div>
+      <form id="chat-form"><textarea id="message" rows="2" maxlength="600" placeholder="先喂饭…" aria-label="聊天消息"></textarea><div><button id="stop" type="button" hidden>停止</button><button id="send" type="submit" disabled>发送</button></div></form>
+    </section>
+    <section class="production-panel">
+      <div class="section-head"><h2>米饭</h2><button id="panel-toggle" class="ghost" aria-expanded="true" aria-controls="production-body" title="折叠产线">收起</button></div>
+      <p id="production-summary" hidden>稻谷 0 · 白米 0 · 熟饭 0</p>
+      <div id="production-body">
+        <div class="stock">
+          <div><img src="/assets/paddy.png" alt="稻谷"><b id="paddy">0</b></div>
+          <div><img src="/assets/white-rice.png" alt="白米"><b id="white">0</b></div>
+          <div><img src="/assets/basin-full.png" alt="熟饭"><b id="cooked">0</b></div>
+        </div>
+        <div id="plots" class="plots"></div>
+        <div class="mills">
+          <div class="machine"><img src="/assets/mill.png" alt="碾米机 1"><div><button id="mill-0">碾米</button><progress id="mill-progress-0" max="1" value="0" hidden></progress></div></div>
+          <div class="machine"><img src="/assets/mill.png" alt="碾米机 2"><div><button id="mill-1">碾米</button><progress id="mill-progress-1" max="1" value="0" hidden></progress></div></div>
+        </div>
+        <div class="machine"><img id="cooker-image" src="/assets/cooker-idle.png" alt="电饭锅"><div><button id="cook">煮饭</button><progress id="cook-progress" max="1" value="0" hidden></progress></div></div>
+        <div class="basin-actions"><button id="fill">盛饭</button><button id="feed">投喂</button></div>
+      </div>
+    </section>
+  </main>
+  <button id="basin-world" aria-label="地上的铁盆，可拖动和抛掷"><img src="/assets/basin-empty-tight.png" alt="铁盆" draggable="false"></button>
+  <div id="toast" role="status" hidden></div>
+  <script type="module" src="/app.mjs"></script>
+</body>
+</html>

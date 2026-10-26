@@ -1,0 +1,283 @@
+{
+  "generator": "built-in ImageGen",
+  "processing": "Mechanical cell cropping, separating empty margins from neighbouring sprites, and tight-alpha basin crops. Original RGBA atlases preserved.",
+  "assets": [
+    {
+      "id": "character-idle",
+      "file": "character-idle.png",
+      "width": 512,
+      "height": 512,
+      "alpha": true,
+      "source": "character-atlas.png",
+      "cell": {
+        "column": 0,
+        "row": 0
+      },
+      "transparentPixels": 106771
+    },
+    {
+      "id": "character-chew",
+      "file": "character-chew.png",
+      "width": 512,
+      "height": 512,
+      "alpha": true,
+      "source": "character-atlas.png",
+      "cell": {
+        "column": 1,
+        "row": 0
+      },
+      "transparentPixels": 108731
+    },
+    {
+      "id": "character-happy",
+      "file": "character-happy.png",
+      "width": 512,
+      "height": 512,
+      "alpha": true,
+      "source": "character-atlas.png",
+      "cell": {
+        "column": 0,
+        "row": 1
+      },
+      "transparentPixels": 102019
+    },
+    {
+      "id": "character-hungry",
+      "file": "character-hungry.png",
+      "width": 512,
+      "height": 512,
+      "alpha": true,
+      "source": "character-atlas.png",
+      "cell": {
+        "column": 1,
+        "row": 1
+      },
+      "transparentPixels": 106533
+    },
+    {
+      "id": "field-empty",
+      "file": "field-empty.png",
+      "width": 384,
+      "height": 384,
+      "alpha": true,
+      "source": "production-atlas.png",
+      "cell": {
+        "column": 0,
+        "row": 0
+      },
+      "transparentPixels": 80516
+    },
+    {
+      "id": "field-growing",
+      "file": "field-growing.png",
+      "width": 384,
+      "height": 384,
+      "alpha": true,
+      "source": "production-atlas.png",
+      "cell": {
+        "column": 1,
+        "row": 0
+      },
+      "transparentPixels": 77154
+    },
+    {
+      "id": "field-ripe",
+      "file": "field-ripe.png",
+      "width": 384,
+      "height": 384,
+      "alpha": true,
+      "source": "production-atlas.png",
+      "cell": {
+        "column": 2,
+        "row": 0
+      },
+      "transparentPixels": 65634
+    },
+    {
+      "id": "paddy",
+      "file": "paddy.png",
+      "width": 384,
+      "height": 384,
+      "alpha": true,
+      "source": "production-atlas.png",
+      "cell": {
+        "column": 3,
+        "row": 0
+      },
+      "transparentPixels": 77714
+    },
+    {
+      "id": "white-rice",
+      "file": "white-rice.png",
+      "width": 384,
+      "height": 384,
+      "alpha": true,
+      "source": "production-atlas.png",
+      "cell": {
+        "column": 0,
+        "row": 1
+      },
+      "transparentPixels": 54782
+    },
+    {
+      "id": "mill",
+      "file": "mill.png",
+      "width": 384,
+      "height": 384,
+      "alpha": true,
+      "source": "production-atlas.png",
+      "cell": {
+        "column": 1,
+        "row": 1
+      },
+      "transparentPixels": 47940
+    },
+    {
+      "id": "cooker-idle",
+      "file": "cooker-idle.png",
+      "width": 384,
+      "height": 384,
+      "alpha": true,
+      "source": "production-atlas.png",
+      "cell": {
+        "column": 2,
+        "row": 1
+      },
+      "transparentPixels": 79730
+    },
+    {
+      "id": "cooker-ready",
+      "file": "cooker-ready.png",
+      "width": 384,
+      "height": 384,
+      "alpha": true,
+      "source": "production-atlas.png",
+      "cell": {
+        "column": 3,
+        "row": 1
+      },
+      "transparentPixels": 61307
+    },
+    {
+      "id": "basin-empty",
+      "file": "basin-empty.png",
+      "width": 384,
+      "height": 384,
+      "alpha": true,
+      "source": "production-atlas.png",
+      "cell": {
+        "column": 0,
+        "row": 2
+      },
+      "transparentPixels": 89742,
+      "sourceRect": {
+        "left": 8,
+        "top": 812,
+        "width": 366,
+        "height": 214
+      },
+      "padding": 8
+    },
+    {
+      "id": "basin-full",
+      "file": "basin-full.png",
+      "width": 384,
+      "height": 384,
+      "alpha": true,
+      "source": "production-atlas.png",
+      "cell": {
+        "column": 1,
+        "row": 2
+      },
+      "transparentPixels": 74641,
+      "sourceRect": {
+        "left": 374,
+        "top": 728,
+        "width": 362,
+        "height": 300
+      },
+      "padding": 8
+    },
+    {
+      "id": "basin-hat",
+      "file": "basin-hat.png",
+      "width": 384,
+      "height": 384,
+      "alpha": true,
+      "source": "production-atlas.png",
+      "cell": {
+        "column": 2,
+        "row": 2
+      },
+      "transparentPixels": 87165,
+      "sourceRect": {
+        "left": 740,
+        "top": 808,
+        "width": 356,
+        "height": 224
+      },
+      "padding": 8
+    },
+    {
+      "id": "rice-grains",
+      "file": "rice-grains.png",
+      "width": 384,
+      "height": 384,
+      "alpha": true,
+      "source": "production-atlas.png",
+      "cell": {
+        "column": 3,
+        "row": 2
+      },
+      "transparentPixels": 112736
+    },
+    {
+      "id": "basin-empty-tight",
+      "file": "basin-empty-tight.png",
+      "width": 365,
+      "height": 201,
+      "alpha": true,
+      "source": "production-atlas.png",
+      "use": "physical prop or head overlay",
+      "sourceRect": {
+        "left": 8,
+        "top": 812,
+        "width": 366,
+        "height": 214
+      },
+      "padding": 8
+    },
+    {
+      "id": "basin-full-tight",
+      "file": "basin-full-tight.png",
+      "width": 362,
+      "height": 291,
+      "alpha": true,
+      "source": "production-atlas.png",
+      "use": "physical prop or head overlay",
+      "sourceRect": {
+        "left": 374,
+        "top": 728,
+        "width": 362,
+        "height": 300
+      },
+      "padding": 8
+    },
+    {
+      "id": "basin-hat-tight",
+      "file": "basin-hat-tight.png",
+      "width": 360,
+      "height": 212,
+      "alpha": true,
+      "source": "production-atlas.png",
+      "use": "physical prop or head overlay",
+      "sourceRect": {
+        "left": 740,
+        "top": 808,
+        "width": 356,
+        "height": 224
+      },
+      "padding": 8
+    }
+  ]
+}

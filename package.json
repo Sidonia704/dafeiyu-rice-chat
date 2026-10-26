@@ -1,0 +1,14 @@
+{
+  "name": "dafeiyu-rice-chat-framework",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "交给本地 Qwen 的大肥鱼饭量聊天游戏框架",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server/index.mjs",
+    "dev": "node --watch --env-file-if-exists=.env server/index.mjs",
+    "build": "node tools/build-hosting.mjs",
+    "test": "node --test tests/*.test.mjs"
+  }
+}
